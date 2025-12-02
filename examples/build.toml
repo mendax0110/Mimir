@@ -1,0 +1,20 @@
+[target.compile_main]
+name = "compile_main"
+inputs = ["main.c"]
+outputs = ["main.o"]
+command = "gcc -c main.c -o main.o"
+dependencies = []
+
+[target.compile_utils]
+name = "compile_utils"
+inputs = ["utils.c"]
+outputs = ["utils.o"]
+command = "gcc -c utils.c -o utils.o"
+dependencies = []
+
+[target.link_program]
+name = "link_program"
+inputs = ["main.o", "utils.o"]
+outputs = ["program"]
+command = "gcc main.o utils.o -o program"
+dependencies = ["compile_main", "compile_utils"]

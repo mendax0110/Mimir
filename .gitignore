@@ -1,0 +1,17 @@
+build/
+.mimir/
+*.o
+*.a
+*.so
+*.out
+mimir
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+Testing/
+examples/main.o
+examples/utils.o
+examples/program
+.idea/
+cmake-build-debug
